@@ -30,7 +30,7 @@ class DeckList extends Component {
     }
     return (
       <View style={styles.container}>
-       <Text style={styles.title}>Decks</Text>
+       <Text style={styles.title}>Decks:</Text>
        <FlatList
         data={Object.values(this.props.decks)}
         renderItem={({ item: {questions, title} }) => {

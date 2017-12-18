@@ -29,7 +29,6 @@ saveDeck = () => {
   render() {
         return (
           <KeyboardAvoidingView style={styles.container} behavior="padding">
-
               <Text style={styles.title}>What is the title of your new deck?</Text>
               <View style={styles.inputContainer}>
                 <TextInput
@@ -42,7 +41,6 @@ saveDeck = () => {
                <TouchableOpacity style={styles.button} onPress={this.saveDeck}>
                 <Text style={{ color: "white" }}>Submit</Text>
                </TouchableOpacity>
-
           </KeyboardAvoidingView>
 
         );

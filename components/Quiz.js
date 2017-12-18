@@ -44,11 +44,12 @@ class Quiz extends Component {
           <Text style={styles.title} >
             Score: {score} out of {questions.length}
           </Text>
+          <TouchableOpacity onPress={this.backToDeck}
+            style={[styles.btnContainer, { backgroundColor: "white" }]}>
+            <Text style={[styles.btnTitle, {color: "black"}]}>Back To Deck</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.btnContainer} onPress={this.restartQuiz}>
             <Text style={styles.btnTitle}>Restart Quiz</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.btnContainer} onPress={this.backToDeck}>
-            <Text style={styles.btnTitle}>Back To Deck</Text>
           </TouchableOpacity>
         </View>
       );
