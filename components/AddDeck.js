@@ -20,14 +20,13 @@ class AddDeck extends Component {
   }
 saveDeck = () => {
   const {title} = this.state;
-  const deckTitle = title;
+  const deckId = title;
   this.setState({ title: "" });
   this.props.dispatch(addDeck(title));
-  this.props.navigation.navigate("Deck", { deckTitle });
+  this.props.navigation.navigate("Deck", { deckId });
   saveDeck(title);
 };
   render() {
-
         return (
           <KeyboardAvoidingView behavior="padding" style={styles.container}>
             <View >
@@ -36,8 +35,8 @@ saveDeck = () => {
                 <TextInput
                     style={styles.input}
                     placeholder="Enter Deck Title"
-                    value={this.state.title}
                     onChangeText={title => this.setState({title})}
+                    value={this.state.title}
                 />
               </View>
                <TouchableOpacity style={styles.button} onPress={this.saveDeck}>
@@ -47,7 +46,6 @@ saveDeck = () => {
           </KeyboardAvoidingView>
 
         );
-    //  }
   }
 }
 

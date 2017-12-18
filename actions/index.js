@@ -10,10 +10,10 @@ export function receiveDecks (decks) {
   };
 }
 
-export function addDeck (deckTitle) {
+export function addDeck (title) {
   return {
     type: ADD_DECK,
-    deckTitle
+    btnTitle
   };
 }
 /*
@@ -24,10 +24,10 @@ export function receiveCards (cards) {
   }
 }
 */
-export function addCard (deckTitle, card) {
+export function addCard (id, card) {
   return {
     type: ADD_CARD,
-    deckTitle,
+    id,
     card
   };
 }

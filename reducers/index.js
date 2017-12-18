@@ -23,14 +23,14 @@ function deck (state = initialState, action) {
         }
       };
     case ADD_CARD:
-        const {deckTitle, card} = action;
+        const {id, card} = action;
         return {
           ...state,
           decks: {
             ...state.decks,
-            [deckTitle]: {
-              ...state.decks[deckTitle],
-              questions: [...state.decks[deckTitle].questions, card]
+            [id]: {
+              ...state.decks[id],
+              questions: [...state.decks[id].questions, card]
             }
           }
         };

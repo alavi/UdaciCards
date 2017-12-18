@@ -11,19 +11,22 @@ class Deck extends Component {
 
   startQuiz = () => {
     this.props.navigation.navigate("Quiz",{
-      deckTitle: this.props.navigation.state.params.decktTitle});
+      deckId: this.props.navigation.state.params.deckId});
   };
 
   addCard = title => {
     this.props.navigation.navigate("AddCard", {
-        title,
+        Title,
         update: () => this.refreshOnGoBack()
       });
   };
 
   render() {
+    console.log ("in Dec.js render this is: this.props:")
+    console.log (this.props)
     const {decks, navigation} = this.props;
-    const deck = decks[navigation.state.params.deckTitle];
+
+    const deck = decks[navigation.state.params.deckId];
     const numberofCards = deck.questions.length;
         return (
           <View style={styles.container}>

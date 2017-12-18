@@ -11,12 +11,12 @@ class AddCard extends Component {
   };
 
   saveNewCard = () => {
-    const deckTitle = this.props.navigation.state.params.title;
-  //  const deckTitle = this.props.navigation.state.params.deckTitle;
+  //  const deckTitle = this.props.navigation.state.params.title;
+    const deckId = this.props.navigation.state.params.title;
     const {question, answer} = this.state;
-    this.props.dispatch(addCard(deckTitle, {question, answer}));
+    this.props.dispatch(addCard(deckId, {question, answer}));
     this.props.navigation.goBack();
-    addCardToDeck(deckTitle, {question, answer});
+    addCardToDeck(deckId, {question, answer});
 
   }
   render() {

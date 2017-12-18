@@ -19,8 +19,8 @@ class Quiz extends Component {
   }
   handleAnswer = correct => {
 
-    const deckTitle = this.props.navigation.state.params.deckTitle;
-    const questions = this.props.decks[deckTitle].questions;
+    const deckId = this.props.navigation.state.params.deckId;
+    const questions = this.props.decks[deckId].questions;
     let {score, index, complete} = this.state;
 
     score = correct ? score + 1 : score;
@@ -34,8 +34,8 @@ class Quiz extends Component {
 
   render() {
 
-    const deckTitle = this.props.navigation.state.params.deckTitle;
-    const questions = this.props.decks[deckTitle].questions;
+    const deckId = this.props.navigation.state.params.deckId;
+    const questions = this.props.decks[deckId].questions;
     const {score, index, complete} = this.state;
 
     if (complete) {

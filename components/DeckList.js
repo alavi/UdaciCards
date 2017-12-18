@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 //import tolower from "lodash.tolower";
 
 class DeckList extends Component {
+
   async componentDidMount() {
     const { dispatch } = this.props;
     const data = await getDecks();
@@ -13,15 +14,15 @@ class DeckList extends Component {
   }
 
   handlePress = title => {
-    const deckTitle = title;
-    this.props.navigation.navigate("Deck", {deckTitle});
+    const deckId = title;
+    this.props.navigation.navigate("Deck", {deckId});
   };
 
   render() {
 
     if (this.props.decks === null) {
         return (
-          <View >
+          <View  style={styles.container}>
             <Text>There is no deck. </Text>
             <Text>Please Click on "New Deck" to add new decks.</Text>
           </View>
@@ -35,8 +36,8 @@ class DeckList extends Component {
         renderItem={({ item: {questions, title} }) => {
           return (
             <TouchableOpacity
-            style={styles.deckListItemContainer}
-            onPress={() => this.handlePress(title)}
+              style={styles.deckListItemContainer}
+              onPress={() => this.handlePress(title)}
             >
               <Text style={styles.btnTitle}>{title}</Text>
               <Text style={styles.btnText}>
@@ -48,11 +49,12 @@ class DeckList extends Component {
         }
       }
       keyExtractor={item => item.title}
-       />
+      />
       </View>
     );
   }
 }
+
 const styles = StyleSheet.create({
   title: {
     marginTop: 40,
