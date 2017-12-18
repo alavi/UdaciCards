@@ -28,9 +28,9 @@ saveDeck = () => {
 };
   render() {
         return (
-          <KeyboardAvoidingView behavior="padding" style={styles.container}>
-            <View >
-              <Text style={styles.title}>Please add a new deck</Text>
+          <KeyboardAvoidingView style={styles.container} behavior="padding">
+
+              <Text style={styles.title}>What is the title of your new deck?</Text>
               <View style={styles.inputContainer}>
                 <TextInput
                     style={styles.input}
@@ -40,20 +40,19 @@ saveDeck = () => {
                 />
               </View>
                <TouchableOpacity style={styles.button} onPress={this.saveDeck}>
-                <Text style={{ color: "white" }}>Create Deck</Text>
+                <Text style={{ color: "white" }}>Submit</Text>
                </TouchableOpacity>
-            </View>
+
           </KeyboardAvoidingView>
 
         );
   }
 }
 
-
 const styles = StyleSheet.create({
   title: {
     marginTop: 40,
-    fontSize: 30
+    fontSize: 20
   },
   container: {
     flex: 1,

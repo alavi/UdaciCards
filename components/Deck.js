@@ -29,21 +29,19 @@ class Deck extends Component {
           <View style={styles.container}>
             <Text style={styles.title}>{deck.title}</Text>
             <Text> {numberofCards} cards</Text>
+            <TouchableOpacity
+              style={[styles.btnContainer, { backgroundColor: "white" }]}
+              onPress={() => this.addCard(deck.title)}>
+            <Text style={[styles.btnTitle, {color: "black"}]}>Add Card</Text>
+            </TouchableOpacity>
             {numberofCards > 0 ? (
               <TouchableOpacity
                 style={styles.btnContainer}
-                onPress={() => this.startQuiz(deck.title)}
-              >
-                <Text style={styles.btnTitle}>Start Quiz </Text>
+                onPress={() => this.startQuiz(deck.title)}>
+                <Text style={styles.btnTitle}>Start Quiz</Text>
+
               </TouchableOpacity>
-            ) : null
-            }
-            <TouchableOpacity
-              style={styles.btnContainer}
-              onPress={() => this.addCard(deck.title)}
-              >
-                <Text style={styles.btnTitle}>Add Card</Text>
-            </TouchableOpacity>
+            ) : null}
           </View>
         );
   }
@@ -56,7 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   title: {
-    fontSize: 30
+    fontSize: 25
   },
   btnContainer: {
     flex: 1,
@@ -65,7 +63,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#333",
     borderRadius: 5,
     marginTop: 15,
-    width: 240,
+    width: 220,
     maxHeight: 40
   },
   btnTitle: {

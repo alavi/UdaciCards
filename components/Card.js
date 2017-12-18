@@ -17,7 +17,7 @@ class Card extends Component {
           <Text style={styles.title}>Answer:</Text>
           <Text style={styles.text}>{this.props.card.answer}</Text>
           <TouchableOpacity
-            style={styles.btnContainer}
+            style={[styles.btnContainer, { backgroundColor: "green" }]}
             onPress={() => {
               this.flipCard();
               this.props.handleAnswer(true);
@@ -26,13 +26,14 @@ class Card extends Component {
             <Text style={styles.btnTitle}>Correct</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            style={styles.btnContainer}
+            style={[styles.btnContainer, { backgroundColor: "red" }]}
             onPress={() => {
               this.flipCard();
               this.props.handleAnswer(false);
             }}
           >
             <Text style={styles.btnTitle}>Incorrect</Text>
+
           </TouchableOpacity>
         </View>
       );
