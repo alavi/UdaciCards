@@ -7,7 +7,11 @@ import { TabNavigator, StackNavigator } from "react-navigation"
 import { purple, white } from "./utils/colors"
 import { FontAwesome, Ionicons } from "@expo/vector-icons"
 import { Constants } from "expo"
-import {DeckList, Deck, AddDeck, AddCard, Quiz } from "./components"
+import DeckList  from "./components/DeckList"
+import Deck from "./components/Deck"
+import AddDeck from "./components/AddDeck"
+import AddCard from "./components/AddCard"
+import Quiz from "./components/Quiz"
 import { setLocalNotification } from "./utils/helpers"
 
 function UdaciStatusBar ({backgroundColor, ...props}) {
