@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "sdkVersion": "21.0.0",
+    "orientation": "portrait",
+    "name": "UdaciCards",
+    "description": "The best triathlon tracker ever",
+    "slug": "udaccards",
+    "version": "1.0",
+  }
+}
