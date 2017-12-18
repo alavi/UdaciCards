@@ -13,7 +13,7 @@ export function receiveDecks (decks) {
 export function addDeck (title) {
   return {
     type: ADD_DECK,
-    btnTitle
+    title
   };
 }
 /*

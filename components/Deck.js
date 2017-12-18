@@ -16,7 +16,7 @@ class Deck extends Component {
 
   addCard = title => {
     this.props.navigation.navigate("AddCard", {
-        Title,
+        title,
         update: () => this.refreshOnGoBack()
       });
   };
