@@ -22,10 +22,7 @@ class Deck extends Component {
   };
 
   render() {
-    console.log ("in Dec.js render this is: this.props:")
-    console.log (this.props)
     const {decks, navigation} = this.props;
-
     const deck = decks[navigation.state.params.deckId];
     const numberofCards = deck.questions.length;
         return (
