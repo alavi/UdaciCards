@@ -11,7 +11,6 @@ class AddCard extends Component {
   };
 
   saveNewCard = () => {
-  //  const deckTitle = this.props.navigation.state.params.title;
     const deckId = this.props.navigation.state.params.title;
     const {question, answer} = this.state;
     this.props.dispatch(addCard(deckId, {question, answer}));
@@ -53,19 +52,18 @@ class AddCard extends Component {
       </KeyboardAvoidingView>
 
     );
-
   }
 }
 
 const styles = StyleSheet.create({
-  title: {
-    marginTop: 40,
-    fontSize: 30
-  },
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
+  },
+  title: {
+    marginTop: 40,
+    fontSize: 30
   },
   inputContainer: {
     height: 40,
